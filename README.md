@@ -2,3 +2,5 @@
 Math Functionality
 
 ## Substraction
+
+## Multiplication
