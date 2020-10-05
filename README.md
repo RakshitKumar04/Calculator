@@ -1,2 +1,4 @@
 # Maths
 Math Functionality
+
+## Substraction
