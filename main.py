@@ -6,6 +6,9 @@
 def add(num1, num2):
     return num1 + num2
 
+def subtract(num1, num2):
+    return num1 - num2
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
