@@ -4,6 +4,9 @@
 def add(num1, num2):
     return num1 + num2
 
+def multiply(num1,num2):
+    return num1 * num2
+
 def divide(num1, num2):
     if num2 == 0:
         print("That is an invalid division, since division by 0 is not mathematically possible!")
@@ -22,3 +25,4 @@ if __name__ == '__main__':
     b = int(input("please input 2nd number: "))
     print(f"\nResult of addition is: {add(a, b)}\n")
     print(f"\nResult of division is: {divide(a, b)}\n")
+    print(f"\nResult of multiplication is: {multiply(a,b)}\n")
