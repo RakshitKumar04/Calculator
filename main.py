@@ -10,6 +10,12 @@ def divide(num1, num2):
         return "Unavailable"
     else:
         return num1 / num2
+    
+def square(number):
+    return number*number
+
+def cube(number):
+    return number*number*number
 
 def print_welcome_msg():
     print(f'\n\n* Hi, welcome to my program hope you have a good time\n\n')  # Press Ctrl+F8 to toggle the breakpoint.
