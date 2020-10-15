@@ -1,18 +1,24 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# This is a math script where we are going to deal with all
+# mathematical functionalities.
 
 def add(num1, num2):
     return num1 + num2
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def divide(num1, num2):
+    if num2 == 0:
+        print("That is an invalid division, since division by 0 is not mathematically possible!")
+        return "Unavailable"
+    else:
+        return num1 / num2
+
+def print_welcome_msg():
+    print(f'\n\n* Hi, welcome to my program hope you have a good time\n\n')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    """Main function which is going to drive whole program"""
+    print_welcome_msg()
+    a = int(input("please input 1st number: "))
+    b = int(input("please input 2nd number: "))
+    print(f"\nResult of addition is: {add(a, b)}\n")
+    print(f"\nResult of division is: {divide(a, b)}\n")
