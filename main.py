@@ -18,7 +18,11 @@ def divide(num1, num2):
         return num1 / num2
 
 def square_root(num1):
-    return num1 ** 0.5
+    if num1 < 0:
+        print("Square root of negative number results to complex number, which is not supported here.")
+        return "Unavailable"
+    else:
+        return num1 ** 0.5
 
 def print_welcome_msg():
     print(f'\n\n* Hi, welcome to my program hope you have a good time\n\n')  # Press Ctrl+F8 to toggle the breakpoint.
