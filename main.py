@@ -4,6 +4,9 @@
 def add(num1, num2):
     return num1 + num2
 
+def square(num):
+    return num*num
+
 def multiply(num1,num2):
     return num1 * num2
 
@@ -24,5 +27,7 @@ if __name__ == '__main__':
     a = int(input("please input 1st number: "))
     b = int(input("please input 2nd number: "))
     print(f"\nResult of addition is: {add(a, b)}\n")
+    print(f"\nResult of square of 1st number is: {square(a)}\n")
+    print(f"\nResult of square of 2st number is: {square(b)}\n")
     print(f"\nResult of division is: {divide(a, b)}\n")
     print(f"\nResult of multiplication is: {multiply(a,b)}\n")
