@@ -36,3 +36,4 @@ if __name__ == '__main__':
     print(f"\nResult of multiplication is: {multiply(a,b)}\n")
     print(f"\nResult of square root of 1st number is: {square_root(a)}\n")
     print(f"\nResult of square root of 2nd number is: {square_root(b)}\n")
+    
