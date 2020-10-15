@@ -5,4 +5,4 @@ Math Functionality
 
 ## Multiplication
 
-##Division
+##Add Cube funtionality
