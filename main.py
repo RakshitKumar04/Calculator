@@ -10,9 +10,6 @@ def divide(num1, num2):
         return "Unavailable"
     else:
         return num1 / num2
-    
-def square(number):
-    return number*number
 
 def cube(number):
     return number*number*number
@@ -28,3 +25,5 @@ if __name__ == '__main__':
     b = int(input("please input 2nd number: "))
     print(f"\nResult of addition is: {add(a, b)}\n")
     print(f"\nResult of division is: {divide(a, b)}\n")
+    print(f"\nResult of cube of 1st number is: {cube(a)}\n")
+    print(f"\nResult of cube of 2nd number is: {cube (b)}\n")
