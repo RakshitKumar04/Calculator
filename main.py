@@ -23,6 +23,13 @@ def cube(number):
 def substract(num1, num2):
     return num1 - num2
 
+def square_root(num1):
+    if num1 < 0:
+        print("Square root of negative number results to complex number, which is not supported here.")
+        return "Unavailable"
+    else:
+        return num1 ** 0.5
+
 def print_welcome_msg():
     print(f'\n\n* Hi, welcome to my program hope you have a good time\n\n')  # Press Ctrl+F8 to toggle the breakpoint.
 
@@ -50,9 +57,12 @@ if __name__ == '__main__':
     print(f"\nResult of square of 2st number is: {square(b)}\n")
     print(f"\nResult of division is: {divide(a, b)}\n")
     print(f"\nResult of multiplication is: {multiply(a,b)}\n")
+    print(f"\nResult of square root of 1st number is: {square_root(a)}\n")
+    print(f"\nResult of square root of 2nd number is: {square_root(b)}\n")
     print(f"\nResult of cube of 1st number is: {cube(a)}\n")
     print(f"\nResult of cube of 2nd number is: {cube (b)}\n")
     print(f"\nResult of 1st minus 2nd number is: {substract(a,b)}\n")
     print(f"\nResult of 2nd minus 1st number is: {substract(b,a)}\n")
     print(f"\nResult of factorial of 1st number is: {fact(a)}\n")
     print(f"\nResult of factorial of 2nd number is: {fact(b)}\n")
+    print(f"\nResult of 2nd minus 1st number is: {substract(b,a)}
