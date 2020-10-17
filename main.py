@@ -2,7 +2,7 @@
 # mathematical functionalities.
 
 def print_welcome_msg():
-    print(f'\n\n* Hi, welcome to my program hope you have a good time\n\n')
+    print(f'\n\n* Hi!, Welcome to my program hope you have a good time.\n\n')
 
 def add(num1, num2):
     return num1 + num2
@@ -15,28 +15,28 @@ def multiply(num1,num2):
 
 def divide(num1, num2):
     if num2 == 0:
-        print("That is an invalid division, since division by 0 is not mathematically possible!")
-        return "Unavailable"
+        print("Error! Invalid division. Division by 0 is not mathematically possible.")
+        return "Error! Division by Zero"
     else:
         return num1 / num2
     
 def square(num):
     return num*num
 
-def cube(number):
-    return number*number*number
+def cube(num):
+    return num*num*num
   
-def square_root(num1):
-    if num1 < 0:
+def square_root(num):
+    if num < 0:
         print("Square root of negative number results to complex number, which is not supported here.")
-        return "Unavailable"
+        return "Error! Square root of negative number"
     else:
-        return num1 ** 0.5
+        return num ** 0.5
  
-def cubroot(num):
+def cube_root(num):
     return num**(1/3)
 
-def fact(num):
+def factorial(num):
     fct = 1
 
     # check if the number is negative, positive or zero
@@ -59,25 +59,25 @@ if __name__ == '__main__':
     b = int(input("please input 2nd number: "))
     
     print(f"\nResult of addition is: {add(a, b)}\n")
-    
-    print(f"\nResult of square of 1st number is: {square(a)}\n")
-    print(f"\nResult of square of 2st number is: {square(b)}\n")
-    
-    print(f"\nResult of division is: {divide(a, b)}\n")
-    
+
+    print(f"\nResult of 1st substract 2nd number is: {substract(a,b)}")
+    print(f"\nResult of 2nd substract 1st number is: {substract(b,a)}\n")
+
     print(f"\nResult of multiplication is: {multiply(a,b)}\n")
     
-    print(f"\nResult of square root of 1st number is: {square_root(a)}\n")
+    print(f"\nResult of division is: {divide(a, b)}\n")
+
+    print(f"\nResult of square of 1st number is: {square(a)}")
+    print(f"\nResult of square of 2st number is: {square(b)}\n")
+    
+    print(f"\nResult of cube of 1st number is: {cube(a)}")
+    print(f"\nResult of cube of 2nd number is: {cube(b)}\n")
+
+    print(f"\nResult of square root of 1st number is: {square_root(a)}")
     print(f"\nResult of square root of 2nd number is: {square_root(b)}\n")
     
-    print(f"\nResult of cube of 1st number is: {cube(a)}\n")
-    print(f"\nResult of cube of 2nd number is: {cube (b)}\n")
+    print(f"\nResult of cube root of 1st number is: {cube_root(a)}")
+    print(f"\nResult of cube root of 1st number is: {cube_root(b)}\n")
     
-    print(f"\nResult of 1st minus 2nd number is: {substract(a,b)}\n")
-    print(f"\nResult of 2nd minus 1st number is: {substract(b,a)}\n"}
-    
-    print(f"\nResult of cube root of 1st number is: {cubroot(a)}\n")
-    print(f"\nResult of cube root of 1st number is: {cubroot(b)}\n")
-    
-    print(f"\nResult of factorial of 1st number is: {fact(a)}\n")
-    print(f"\nResult of factorial of 2nd number is: {fact(b)}\n")
+    print(f"\nResult of factorial of 1st number is: {factorial(a)}")
+    print(f"\nResult of factorial of 2nd number is: {factorial(b)}\n")
