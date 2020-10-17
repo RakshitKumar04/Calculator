@@ -1,8 +1,17 @@
 # This is a math script where we are going to deal with all
 # mathematical functionalities.
 
+def cube(number):
+    return number*number*number
+
 def add(num1, num2):
     return num1 + num2
+
+def square(num):
+    return num*num
+
+def multiply(num1,num2):
+    return num1 * num2
 
 def divide(num1, num2):
     if num2 == 0:
@@ -10,7 +19,7 @@ def divide(num1, num2):
         return "Unavailable"
     else:
         return num1 / num2
-
+      
 def cube(number):
     return number*number*number
 
@@ -24,6 +33,9 @@ if __name__ == '__main__':
     a = int(input("please input 1st number: "))
     b = int(input("please input 2nd number: "))
     print(f"\nResult of addition is: {add(a, b)}\n")
+    print(f"\nResult of square of 1st number is: {square(a)}\n")
+    print(f"\nResult of square of 2st number is: {square(b)}\n")
     print(f"\nResult of division is: {divide(a, b)}\n")
+    print(f"\nResult of multiplication is: {multiply(a,b)}\n")
     print(f"\nResult of cube of 1st number is: {cube(a)}\n")
     print(f"\nResult of cube of 2nd number is: {cube (b)}\n")
