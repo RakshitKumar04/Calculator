@@ -29,6 +29,9 @@ def square_root(num1):
         return "Unavailable"
     else:
         return num1 ** 0.5
+ 
+def cubroot(num):
+    return num**(1/3)
 
 def print_welcome_msg():
     print(f'\n\n* Hi, welcome to my program hope you have a good time\n\n')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -50,3 +53,5 @@ if __name__ == '__main__':
     print(f"\nResult of cube of 2nd number is: {cube (b)}\n")
     print(f"\nResult of 1st minus 2nd number is: {substract(a,b)}\n")
     print(f"\nResult of 2nd minus 1st number is: {substract(b,a)}
+    print(f"\nResult of cube root of 1st number is: {cubroot(a)}\n")
+    print(f"\nResult of cube root of 1st number is: {cubroot(b)}\n")
