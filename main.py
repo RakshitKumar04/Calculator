@@ -33,6 +33,19 @@ def square_root(num1):
 def print_welcome_msg():
     print(f'\n\n* Hi, welcome to my program hope you have a good time\n\n')  # Press Ctrl+F8 to toggle the breakpoint.
 
+def fact(num):
+    fct = 1
+
+    # check if the number is negative, positive or zero
+    if num < 0:
+        print("Sorry, factorial does not exist for negative numbers")
+    elif num == 0:
+        print("The factorial of 0 is 1")
+    else:
+        for i in range(1, num + 1):
+            fct = fct * i
+        return fct;
+
 
 if __name__ == '__main__':
     """Main function which is going to drive whole program"""
@@ -49,4 +62,7 @@ if __name__ == '__main__':
     print(f"\nResult of cube of 1st number is: {cube(a)}\n")
     print(f"\nResult of cube of 2nd number is: {cube (b)}\n")
     print(f"\nResult of 1st minus 2nd number is: {substract(a,b)}\n")
+    print(f"\nResult of 2nd minus 1st number is: {substract(b,a)}\n")
+    print(f"\nResult of factorial of 1st number is: {fact(a)}\n")
+    print(f"\nResult of factorial of 2nd number is: {fact(b)}\n")
     print(f"\nResult of 2nd minus 1st number is: {substract(b,a)}
