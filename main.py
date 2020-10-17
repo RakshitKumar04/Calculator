@@ -16,6 +16,9 @@ def divide(num1, num2):
         return "Unavailable"
     else:
         return num1 / num2
+    
+def sqroot(num):
+    return math.sqrt(num)
       
 def cube(number):
     return number*number*number
@@ -65,4 +68,6 @@ if __name__ == '__main__':
     print(f"\nResult of 2nd minus 1st number is: {substract(b,a)}\n")
     print(f"\nResult of factorial of 1st number is: {fact(a)}\n")
     print(f"\nResult of factorial of 2nd number is: {fact(b)}\n")
-    print(f"\nResult of 2nd minus 1st number is: {substract(b,a)}
+    print(f"\nResult of 2nd minus 1st number is: {substract(b,a)}    
+    print(f"\nResult of square root of 1st number is: {sqroot(a)}\n")
+    print(f"\nResult of square root of 2nd number is: {sqroot(b)}\n")
