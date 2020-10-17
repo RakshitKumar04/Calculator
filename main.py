@@ -16,6 +16,9 @@ def divide(num1, num2):
         return "Unavailable"
     else:
         return num1 / num2
+    
+def sqroot(num):
+    return math.sqrt(num)
       
 def cube(number):
     return number*number*number
