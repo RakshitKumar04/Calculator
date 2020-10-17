@@ -1,6 +1,10 @@
 # Maths Calculator
 My project is on a calculator that does some basic calculations.
-To run the CalculatorGUI file, clone this repo onto your machine, navigate to the folder, and run the CalculatorGui file using `python CalculatorGUI`
+
+You'll need the tkinter module for running this.
+To run the CalculatorGUI file, clone this repo onto your machine,
+navigate to the folder using cd path/to/clone/folder,
+and run the CalculatorGUI file using `python CalculatorGUI.py`
 
 ## dependencies:
 - python3.6+
