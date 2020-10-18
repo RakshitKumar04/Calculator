@@ -19,6 +19,9 @@ def divide(num1, num2):
         return "Error! Division by Zero"
     else:
         return num1 / num2
+
+def remainder(num1, num2):
+    return num1 % num2
     
 def square(num):
     return num*num
@@ -47,7 +50,7 @@ def factorial(num):
     else:
         for i in range(1, num + 1):
             fct = fct * i
-        return fct;
+        return fct
 
 
 if __name__ == '__main__':
@@ -67,6 +70,8 @@ if __name__ == '__main__':
     
     print(f"\nResult of division is: {divide(a, b)}\n")
 
+    print(f"\nResult of remainder is {remainder(a, b)}\n")
+
     print(f"\nResult of square of 1st number is: {square(a)}")
     print(f"\nResult of square of 2st number is: {square(b)}\n")
     
@@ -77,7 +82,9 @@ if __name__ == '__main__':
     print(f"\nResult of square root of 2nd number is: {square_root(b)}\n")
     
     print(f"\nResult of cube root of 1st number is: {cube_root(a)}")
-    print(f"\nResult of cube root of 1st number is: {cube_root(b)}\n")
+    print(f"\nResult of cube root of 2nc number is: {cube_root(b)}\n")
     
     print(f"\nResult of factorial of 1st number is: {factorial(a)}")
     print(f"\nResult of factorial of 2nd number is: {factorial(b)}\n")
+
+    

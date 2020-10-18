@@ -7,6 +7,7 @@ My project is on a calculator that does some basic calculations.
 ### * Substraction
 ### * Multiplication
 ### * Division
+### * Remainder
 ### * Square
 ### * Cube
 ### * Square root
