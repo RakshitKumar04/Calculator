@@ -28,6 +28,9 @@ def square(num):
 
 def cube(num):
     return num*num*num
+
+def power(num1, num2):
+    return num1**num2
   
 def square_root(num):
     if num < 0:
@@ -77,6 +80,9 @@ if __name__ == '__main__':
     
     print(f"\nResult of cube of 1st number is: {cube(a)}")
     print(f"\nResult of cube of 2nd number is: {cube(b)}\n")
+
+    print(f"\nResult of 1st number to the power of 2nd number is: {power(a, b)}")
+    print(f"\nResult of 2nd number to the power of 1st number is: {power(b, a)}\n")
 
     print(f"\nResult of square root of 1st number is: {square_root(a)}")
     print(f"\nResult of square root of 2nd number is: {square_root(b)}\n")

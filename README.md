@@ -10,6 +10,7 @@ My project is on a calculator that does some basic calculations.
 ### * Remainder
 ### * Square
 ### * Cube
+### * Power
 ### * Square root
 ### * cube root
 ### * Factorial
