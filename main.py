@@ -48,7 +48,14 @@ def factorial(num):
         for i in range(1, num + 1):
             fct = fct * i
         return fct;
-
+    
+def power(x,y):
+    
+    if (y == 0): return 1
+    elif (int(y % 2) == 0): 
+        return (power(x, int(y / 2)) *power(x, int(y / 2))) 
+    else: 
+        return (x * power(x, int(y / 2)) *power(x, int(y / 2))) 
 
 if __name__ == '__main__':
     """Main function which is going to drive whole program"""
@@ -81,3 +88,5 @@ if __name__ == '__main__':
     
     print(f"\nResult of factorial of 1st number is: {factorial(a)}")
     print(f"\nResult of factorial of 2nd number is: {factorial(b)}\n")
+    
+    print(f"\nResult of 1st number raised to the power of 2nd number is: {power(a,b)}")
