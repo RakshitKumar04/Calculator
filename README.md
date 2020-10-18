@@ -12,7 +12,7 @@ My project is on a calculator that does some basic calculations.
 ### * Cube
 ### * Power
 ### * Square root
-### * cube root
+### * Cube root
 ### * Factorial
 
 There are many more to go.. Please add more Maths functionalities you can add in issues and send the PR for the same.

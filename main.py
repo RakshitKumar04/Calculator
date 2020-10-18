@@ -88,7 +88,7 @@ if __name__ == '__main__':
     print(f"\nResult of square root of 2nd number is: {square_root(b)}\n")
     
     print(f"\nResult of cube root of 1st number is: {cube_root(a)}")
-    print(f"\nResult of cube root of 2nc number is: {cube_root(b)}\n")
+    print(f"\nResult of cube root of 2nd number is: {cube_root(b)}\n")
     
     print(f"\nResult of factorial of 1st number is: {factorial(a)}")
     print(f"\nResult of factorial of 2nd number is: {factorial(b)}\n")
