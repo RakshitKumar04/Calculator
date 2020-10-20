@@ -1,3 +1,4 @@
+#HELLO WORLD
 # This is a math script where we are going to deal with all
 # mathematical functionalities.
 
@@ -48,7 +49,10 @@ def factorial(num):
         for i in range(1, num + 1):
             fct = fct * i
         return fct;
-
+    
+def average(num1, num2):
+    avg = float((a+b)/2)
+    return avg
 
 if __name__ == '__main__':
     """Main function which is going to drive whole program"""
@@ -72,6 +76,8 @@ if __name__ == '__main__':
     
     print(f"\nResult of cube of 1st number is: {cube(a)}")
     print(f"\nResult of cube of 2nd number is: {cube(b)}\n")
+    
+    print(f"\nResult of average of two number is = {average(a, b)}\n")
 
     print(f"\nResult of square root of 1st number is: {square_root(a)}")
     print(f"\nResult of square root of 2nd number is: {square_root(b)}\n")
