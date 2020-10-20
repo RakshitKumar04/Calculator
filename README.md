@@ -12,6 +12,10 @@ My project is on a calculator that does some basic calculations.
 ### * Square root
 ### * cube root
 ### * Factorial
+### * Power
+### * Remainder
+### * Average
+### * Percentage
 
 There are many more to go.. Please add more Maths functionalities you can add in issues and send the PR for the same.
 
