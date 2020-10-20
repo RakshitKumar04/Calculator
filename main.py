@@ -8,10 +8,6 @@ def pow(num1,num2):
         power = power * num1
     return power
 
-def per(num):
-    per1 = float((num*100)/200)
-    return per1
-
 def print_welcome_msg():
     print(f'\n\n* Hi!, Welcome to my program hope you have a good time.\n\n')
 
@@ -100,6 +96,3 @@ if __name__ == '__main__':
     
     print(f"\nResult of power of 1st number is: {pow(a,b)}\n")
     print(f"\nResult of power of 2nd number is: {pow(b,a)}\n")
-
-    print(f"\nResult of percentage of 1st number is: {per(a)}%\n")
-    print(f"\nResult of percentage of 2nd number is: {per(b)}%\n")
