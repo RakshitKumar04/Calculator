@@ -8,6 +8,10 @@ def pow(num1,num2):
         power = power * num1
     return power
 
+def rmdr(num1, num2):
+    rem = float((num1%num2))
+    return rem
+
 def pers(num):
     per1 = float((num*100)/200)
     return per1
@@ -103,3 +107,5 @@ if __name__ == '__main__':
 
     print(f"\nResult of percentage of 1st number is: {pers(a)}%\n")
     print(f"\nResult of percentage of 2nd number is: {pers(b)}%\n")
+    
+    print(f"\nResult of remainder of number is = {rmdr(a, b)}\n")
