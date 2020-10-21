@@ -64,6 +64,14 @@ def factorial(num):
             fct = fct * i
         return fct;
     
+def power(x,y):
+    
+    if (y == 0): return 1
+    elif (int(y % 2) == 0): 
+        return (power(x, int(y / 2)) *power(x, int(y / 2))) 
+    else: 
+        return (x * power(x, int(y / 2)) *power(x, int(y / 2))) 
+
 def average(num1, num2):
     avg = float((a+b)/2)
     return avg
@@ -102,6 +110,8 @@ if __name__ == '__main__':
     print(f"\nResult of factorial of 1st number is: {factorial(a)}")
     print(f"\nResult of factorial of 2nd number is: {factorial(b)}\n")
     
+    print(f"\nResult of 1st number raised to the power of 2nd number is: {power(a,b)}")
+
     print(f"\nResult of power of 1st number is: {pow(a,b)}\n")
     print(f"\nResult of power of 2nd number is: {pow(b,a)}\n")
 
