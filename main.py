@@ -2,14 +2,18 @@
 # mathematical functionalities.
 import math
 
+
 def add(num1, num2):
     return num1 + num2
 
-def square(num):
-    return num*num
 
-def multiply(num1,num2):
+def square(num):
+    return num * num
+
+
+def multiply(num1, num2):
     return num1 * num2
+
 
 def divide(num1, num2):
     if num2 == 0:
@@ -18,11 +22,20 @@ def divide(num1, num2):
     else:
         return num1 / num2
 
+
 def subtract(num1, num2):
     return num1 - num2
 
+
+def rmdr(num1, num2):
+    rem = float(num1 % num2)
+    return rem
+
+
 def power(num1, num2):
     return pow(num1, num2)
+
+
 def main():
     func = int(input("Press 1 to add 2 numbers\n\
 Press 2 to subtract a number from another number\n\
@@ -33,28 +46,62 @@ Press 6 to square a number\n\
 Press 7 to to cube a number\n\
 Press 8 to find square root of a no.\n\
 Press 9 to find cube root of a no.\n\
-Press 10 to raise a number to any power\n"))
+Press 10 to raise a number to any power\n\
+Press 11 to find remainder after division\n\
+Press 12 to find average\n\
+Press 13 to find percentage\n"))
+
     if func <= 4:
         a = eval(input("please input 1st number: "))
         b = eval(input("please input 2nd number: "))
         if func == 1:
-            print(f'The addition of the two numbers is: \n{a} + {b} = {add(a,b)}')
+            print(
+                f'The addition of the two numbers is: \n{a} + {b} = {add(a,b)}')
         elif func == 2:
-            print(f'The subtraction of the two numers is: \n{a} - {b} = {subtract(a,b)}')
+            print(
+                f'The subtraction of the two numers is: \n{a} - {b} = {subtract(a,b)}')
         elif func == 3:
-            print(f'The multiplication of the two numbers is: \n{a} x {b} = {multiply(a,b)}')
+            print(
+                f'The multiplication of the two numbers is: \n{a} x {b} = {multiply(a,b)}')
         else:
             print(f'The division results in: \n{a} / {b} = {divide(a,b)}')
     elif func < 10:
         num = eval(input('Enter the number: '))
-        print(f'The factorial of {num} = {math.factorial(num)}' if func == 5 else '')
-        print(f'The square of {num} = {power(num,2)}' if func==6 else f'The cube of the {num} = {power(num, 3)}' if func == 7 else '')
-        l = math.sqrt(abs(num)) if func == 8 else math.pow(abs(num), 1/3) if func==9 else ''
-        print(f'The cube root of {num} is {l}' if func == 9 else f'The square root of {num} is +{l} or -{l}' if func==8 else '')
+        print(
+            f'The factorial of {num} = {math.factorial(num)}' if func == 5 else '')
+        print(f'The square of {num} = {power(num,2)}' if func ==
+              6 else f'The cube of the {num} = {power(num, 3)}' if func == 7 else '')
+        l = math.sqrt(
+            abs(num)) if func == 8 else math.pow(
+            abs(num), 1 / 3) if func == 9 else ''
+        print(f'The cube root of {num} is {l}' if func ==
+              9 else f'The square root of {num} is +{l} or -{l}' if func == 8 else '')
     elif func == 10:
         num = eval(input('Enter no. to find the power of: '))
         e = eval(input('Enter the value of the power: '))
         print(f'The no. {num} to the power{e}: {num}^{e}= {power(num, e)}')
+    elif func == 11:
+        a = eval(input('Input no. being divided(dividend): '))
+        b = eval(input('Input the divisor: '))
+        if not b == 0:
+            rem = rmdr(a, b)
+            print(f'{a} / {b} gives remainder as {rem}')
+        else:
+            print('error: division by zero is undefined.')
+    elif func == 12:
+        nums = int(
+            input('Enter the no. of terms you want to find the average of: '))
+        num_list = [eval(input(f'Enter term#{_+1}: ')) for _ in range(nums)]
+        print(
+            f"Average of {','.join(map(str, num_list))} is: {sum(num_list)/nums}")
+    elif func == 13:
+        n = eval(input('Enter the value of specific parts: '))
+        d = eval(input('Enter the total value: '))
+        if not d == 0:
+            print(f'\nThe percentage is equal to- {(n/d)*100}%')
+        else:
+            print('error: division by zero is undefined.')
+
 
 if __name__ == '__main__':
     """Main function which is going to drive whole program"""
