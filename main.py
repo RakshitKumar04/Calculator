@@ -1,121 +1,109 @@
 # This is a math script where we are going to deal with all
 # mathematical functionalities.
+import math
 
-def pow(num1,num2):
-    power = 1
-
-    for i in range(1, num2 + 1):
-        power = power * num1
-    return power
-
-def rmdr(num1, num2):
-    rem = float((num1%num2))
-    return rem
-
-def pers(num):
-    per1 = float((num*100)/200)
-    return per1
-
-def print_welcome_msg():
-    print(f'\n\n* Hi!, Welcome to my program hope you have a good time.\n\n')
 
 def add(num1, num2):
     return num1 + num2
 
-def substract(num1, num2):
-    return num1 - num2
 
-def multiply(num1,num2):
+def square(num):
+    return num * num
+
+
+def multiply(num1, num2):
     return num1 * num2
+
 
 def divide(num1, num2):
     if num2 == 0:
-        print("Error! Invalid division. Division by 0 is not mathematically possible.")
-        return "Error! Division by Zero"
+        print("That is an invalid division, since division by 0 is not mathematically defined!")
+        return "Unavailable"
     else:
         return num1 / num2
-    
-def square(num):
-    return num*num
 
-def cube(num):
-    return num*num*num
-  
-def square_root(num):
-    if num < 0:
-        print("Square root of negative number results to complex number, which is not supported here.")
-        return "Error! Square root of negative number"
-    else:
-        return num ** 0.5
- 
-def cube_root(num):
-    return num**(1/3)
 
-def factorial(num):
-    fct = 1
+def subtract(num1, num2):
+    return num1 - num2
 
-    # check if the number is negative, positive or zero
-    if num < 0:
-        print("Sorry, factorial does not exist for negative numbers")
-    elif num == 0:
-        print("The factorial of 0 is 1")
-    else:
-        for i in range(1, num + 1):
-            fct = fct * i
-        return fct;
-    
-def power(x,y):
-    
-    if (y == 0): return 1
-    elif (int(y % 2) == 0): 
-        return (power(x, int(y / 2)) *power(x, int(y / 2))) 
-    else: 
-        return (x * power(x, int(y / 2)) *power(x, int(y / 2))) 
 
-def average(num1, num2):
-    avg = float((a+b)/2)
-    return avg
+def rmdr(num1, num2):
+    rem = float(num1 % num2)
+    return rem
+
+
+def power(num1, num2):
+    return pow(num1, num2)
+
+
+def main():
+    func = int(input("Press 1 to add 2 numbers\n\
+Press 2 to subtract a number from another number\n\
+Press 3 to multiply 2 numbers\n\
+Press 4 to divide a no. by another number\n\
+Press 5 to find factorial of a number\n\
+Press 6 to square a number\n\
+Press 7 to to cube a number\n\
+Press 8 to find square root of a no.\n\
+Press 9 to find cube root of a no.\n\
+Press 10 to raise a number to any power\n\
+Press 11 to find remainder after division\n\
+Press 12 to find average\n\
+Press 13 to find percentage\n"))
+
+    if func <= 4:
+        a = eval(input("please input 1st number: "))
+        b = eval(input("please input 2nd number: "))
+        if func == 1:
+            print(
+                f'The addition of the two numbers is: \n{a} + {b} = {add(a,b)}')
+        elif func == 2:
+            print(
+                f'The subtraction of the two numers is: \n{a} - {b} = {subtract(a,b)}')
+        elif func == 3:
+            print(
+                f'The multiplication of the two numbers is: \n{a} x {b} = {multiply(a,b)}')
+        else:
+            print(f'The division results in: \n{a} / {b} = {divide(a,b)}')
+    elif func < 10:
+        num = eval(input('Enter the number: '))
+        print(
+            f'The factorial of {num} = {math.factorial(num)}' if func == 5 else '')
+        print(f'The square of {num} = {power(num,2)}' if func ==
+              6 else f'The cube of the {num} = {power(num, 3)}' if func == 7 else '')
+        l = math.sqrt(
+            abs(num)) if func == 8 else math.pow(
+            abs(num), 1 / 3) if func == 9 else ''
+        print(f'The cube root of {num} is {l}' if func ==
+              9 else f'The square root of {num} is +{l} or -{l}' if func == 8 else '')
+    elif func == 10:
+        num = eval(input('Enter no. to find the power of: '))
+        e = eval(input('Enter the value of the power: '))
+        print(f'The no. {num} to the power{e}: {num}^{e}= {power(num, e)}')
+    elif func == 11:
+        a = eval(input('Input no. being divided(dividend): '))
+        b = eval(input('Input the divisor: '))
+        if not b == 0:
+            rem = rmdr(a, b)
+            print(f'{a} / {b} gives remainder as {rem}')
+        else:
+            print('error: division by zero is undefined.')
+    elif func == 12:
+        nums = int(
+            input('Enter the no. of terms you want to find the average of: '))
+        num_list = [eval(input(f'Enter term#{_+1}: ')) for _ in range(nums)]
+        print(
+            f"Average of {','.join(map(str, num_list))} is: {sum(num_list)/nums}")
+    elif func == 13:
+        n = eval(input('Enter the value of specific parts: '))
+        d = eval(input('Enter the total value: '))
+        if not d == 0:
+            print(f'\nThe percentage is equal to- {(n/d)*100}%')
+        else:
+            print('error: division by zero is undefined.')
+
 
 if __name__ == '__main__':
     """Main function which is going to drive whole program"""
-    
-    print_welcome_msg()
-    
-    a = int(input("please input 1st number: "))
-    b = int(input("please input 2nd number: "))
-    
-    print(f"\nResult of addition is: {add(a, b)}\n")
-
-    print(f"\nResult of 1st substract 2nd number is: {substract(a,b)}")
-    print(f"\nResult of 2nd substract 1st number is: {substract(b,a)}\n")
-
-    print(f"\nResult of multiplication is: {multiply(a,b)}\n")
-    
-    print(f"\nResult of division is: {divide(a, b)}\n")
-
-    print(f"\nResult of square of 1st number is: {square(a)}")
-    print(f"\nResult of square of 2st number is: {square(b)}\n")
-    
-    print(f"\nResult of cube of 1st number is: {cube(a)}")
-    print(f"\nResult of cube of 2nd number is: {cube(b)}\n")
-    
-    print(f"\nResult of average of two number is = {average(a, b)}\n")
-
-    print(f"\nResult of square root of 1st number is: {square_root(a)}")
-    print(f"\nResult of square root of 2nd number is: {square_root(b)}\n")
-    
-    print(f"\nResult of cube root of 1st number is: {cube_root(a)}")
-    print(f"\nResult of cube root of 1st number is: {cube_root(b)}\n")
-    
-    print(f"\nResult of factorial of 1st number is: {factorial(a)}")
-    print(f"\nResult of factorial of 2nd number is: {factorial(b)}\n")
-    
-    print(f"\nResult of 1st number raised to the power of 2nd number is: {power(a,b)}")
-
-    print(f"\nResult of power of 1st number is: {pow(a,b)}\n")
-    print(f"\nResult of power of 2nd number is: {pow(b,a)}\n")
-
-    print(f"\nResult of percentage of 1st number is: {pers(a)}%\n")
-    print(f"\nResult of percentage of 2nd number is: {pers(b)}%\n")
-    
-    print(f"\nResult of remainder of number is = {rmdr(a, b)}\n")
+    print(f'\n\n* Hi, welcome to my program hope you have a good time\n\n')  # Press Ctrl+F8 to toggle the breakpoint.
+    main()
