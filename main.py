@@ -45,6 +45,11 @@ def co(num1, num2):
     deg=math.degrees(sn)
     return deg
 
+def ta(num1, num2):
+    sn=math.atan(num1/num2)
+    deg=math.degrees(sn)
+    return deg
+
 def main():
     func = int(input("Press 1 to add 2 numbers\n\
 Press 2 to subtract a number from another number\n\
@@ -60,7 +65,8 @@ Press 11 to find remainder after division\n\
 Press 12 to find average\n\
 Press 13 to find percentage\n\
 Press 14 to find sin value.\n\
-Press 15 to find cos value.\n"))
+Press 15 to find cos value.\n\
+Press 16 to find tan value.\n"))
 
     if func <= 4:
         a = eval(input("please input 1st number: "))
@@ -121,6 +127,11 @@ Press 15 to find cos value.\n"))
         hyp = eval(input('Enter the hypotenuse of right angle triangle : '))
         sum=co(opp,hyp)
         print(format('Cos θ = {:.0f}'.format(sum) +'°'))
+    elif func == 16:
+        opp = eval(input('Enter the height of right angle triangle : '))
+        hyp = eval(input('Enter the base of right angle triangle : '))
+        sum=co(opp,hyp)
+        print(format('Tan θ = {:.0f}'.format(sum) +'°'))
 
 if __name__ == '__main__':
     """Main function which is going to drive whole program"""
