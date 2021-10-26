@@ -19,6 +19,7 @@ There are currently to versions of the project:
 - Remainder
 - Average
 - Percentage
+- Sin
 
 ## Feature in GUI calculator are:
 
