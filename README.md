@@ -22,6 +22,7 @@ There are currently to versions of the project:
 - Sin
 - Cos
 - Tan
+- Permutation & Combination
 
 ## Feature in GUI calculator are:
 
