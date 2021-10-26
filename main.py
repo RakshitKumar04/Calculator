@@ -35,6 +35,10 @@ def rmdr(num1, num2):
 def power(num1, num2):
     return pow(num1, num2)
 
+def si(num1, num2):
+    sn=math.asin(num1/num2)
+    deg=math.degrees(sn)
+    return deg
 
 def main():
     func = int(input("Press 1 to add 2 numbers\n\
@@ -49,7 +53,8 @@ Press 9 to find cube root of a no.\n\
 Press 10 to raise a number to any power\n\
 Press 11 to find remainder after division\n\
 Press 12 to find average\n\
-Press 13 to find percentage\n"))
+Press 13 to find percentage\n\
+Press 14 to find sin value.\n\n"))
 
     if func <= 4:
         a = eval(input("please input 1st number: "))
@@ -101,6 +106,11 @@ Press 13 to find percentage\n"))
             print(f'\nThe percentage is equal to- {(n/d)*100}%')
         else:
             print('error: division by zero is undefined.')
+    elif func == 14:
+        opp = eval(input('Enter the height of right angle triangle : '))
+        hyp = eval(input('Enter the hypotenuse of right angle triangle : '))
+        sum=si(opp,hyp)
+        print(format('Sin θ = {:.0f}'.format(sum) +'°'))
 
 
 if __name__ == '__main__':
