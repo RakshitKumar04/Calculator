@@ -20,6 +20,8 @@ There are currently to versions of the project:
 - Average
 - Percentage
 - Sin
+- Cos
+- Tan
 
 ## Feature in GUI calculator are:
 
