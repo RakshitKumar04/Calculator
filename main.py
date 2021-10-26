@@ -1,7 +1,7 @@
 # This is a math script where we are going to deal with all
 # mathematical functionalities.
 import math
-
+import itertools  
 
 def add(num1, num2):
     return num1 + num2
@@ -50,6 +50,12 @@ def ta(num1, num2):
     deg=math.degrees(sn)
     return deg
 
+def permutation():
+    from itertools import permutations  
+    seq = permutations(list(map(int,input("Enter the nos.: ").split())))  
+    for p in list(seq):  
+        print(p)
+
 def main():
     func = int(input("Press 1 to add 2 numbers\n\
 Press 2 to subtract a number from another number\n\
@@ -66,7 +72,8 @@ Press 12 to find average\n\
 Press 13 to find percentage\n\
 Press 14 to find sin value.\n\
 Press 15 to find cos value.\n\
-Press 16 to find tan value.\n"))
+Press 16 to find tan value.\n\
+Press 17 to print sample space in Permutation & Combination.\n"))
 
     if func <= 4:
         a = eval(input("please input 1st number: "))
@@ -132,6 +139,8 @@ Press 16 to find tan value.\n"))
         hyp = eval(input('Enter the base of right angle triangle : '))
         sum=co(opp,hyp)
         print(format('Tan θ = {:.0f}'.format(sum) +'°'))
+    elif func == 17:
+        permutation()
 
 if __name__ == '__main__':
     """Main function which is going to drive whole program"""
