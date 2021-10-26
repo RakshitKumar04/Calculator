@@ -40,6 +40,11 @@ def si(num1, num2):
     deg=math.degrees(sn)
     return deg
 
+def co(num1, num2):
+    sn=math.acos(num1/num2)
+    deg=math.degrees(sn)
+    return deg
+
 def main():
     func = int(input("Press 1 to add 2 numbers\n\
 Press 2 to subtract a number from another number\n\
@@ -54,7 +59,8 @@ Press 10 to raise a number to any power\n\
 Press 11 to find remainder after division\n\
 Press 12 to find average\n\
 Press 13 to find percentage\n\
-Press 14 to find sin value.\n\n"))
+Press 14 to find sin value.\n\
+Press 15 to find cos value.\n"))
 
     if func <= 4:
         a = eval(input("please input 1st number: "))
@@ -97,8 +103,7 @@ Press 14 to find sin value.\n\n"))
         nums = int(
             input('Enter the no. of terms you want to find the average of: '))
         num_list = [eval(input(f'Enter term#{_+1}: ')) for _ in range(nums)]
-        print(
-            f"Average of {','.join(map(str, num_list))} is: {sum(num_list)/nums}")
+        print(f"Average of {','.join(map(str, num_list))} is: {math.sum(num_list)/nums}")
     elif func == 13:
         n = eval(input('Enter the value of specific parts: '))
         d = eval(input('Enter the total value: '))
@@ -111,7 +116,11 @@ Press 14 to find sin value.\n\n"))
         hyp = eval(input('Enter the hypotenuse of right angle triangle : '))
         sum=si(opp,hyp)
         print(format('Sin θ = {:.0f}'.format(sum) +'°'))
-
+    elif func == 15:
+        opp = eval(input('Enter the base of right angle triangle : '))
+        hyp = eval(input('Enter the hypotenuse of right angle triangle : '))
+        sum=co(opp,hyp)
+        print(format('Cos θ = {:.0f}'.format(sum) +'°'))
 
 if __name__ == '__main__':
     """Main function which is going to drive whole program"""
