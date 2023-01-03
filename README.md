@@ -1,4 +1,4 @@
-# Maths Calculator
+# Math Calculator
 My project is on a calculator that does some basic calculations.
 There are currently to versions of the project:
 1 - CLI-caclulator 
